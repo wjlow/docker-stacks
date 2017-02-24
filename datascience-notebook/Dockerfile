@@ -25,6 +25,8 @@ RUN echo "deb http://ppa.launchpad.net/staticfloat/juliareleases/ubuntu trusty m
 
 USER $NB_USER
 
+RUN conda install --quiet --yes opencv
+
 # R packages including IRKernel which gets installed globally.
 RUN conda config --add channels r && \
     conda install --quiet --yes \
